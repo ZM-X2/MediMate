@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3fbfb">
+<title>MediMate | ميدي ميت</title>
+<style>
+:root{--ink:#203647;--muted:#708292;--teal:#42aeb2;--teal2:#267f88;--bg:#f3fbfb;--line:#e3eeee;--red:#d95057;--softred:#fff0ef}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.6}.app{max-width:850px;margin:auto;padding:16px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px}.logo{width:45px;height:45px;border-radius:15px;background:linear-gradient(135deg,#7bd1cd,#339ea7);color:white;display:grid;place-items:center;font-size:28px;font-weight:bold;box-shadow:0 6px 15px #399da733}.brand h1{margin:0;font-size:20px}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.8px}.lang{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 12px;color:var(--ink);font-weight:bold}.hero{text-align:center;padding:22px 8px 16px}.bot{width:110px;height:100px;margin:0 auto 10px;position:relative}.bot .head{position:absolute;width:80px;height:54px;border-radius:25px;background:#fff;box-shadow:inset -4px -4px 8px #dce8e8;left:15px;top:0}.eyes{display:flex;justify-content:space-between;position:absolute;top:25px;left:20px;right:20px}.eyes i{height:8px;width:8px;border-radius:50%;background:#31495a}.bodybot{position:absolute;left:10px;top:49px;width:90px;height:48px;border-radius:24px;background:#fff;box-shadow:inset -4px -4px 8px #dce8e8}.cross{position:absolute;top:9px;left:36px;color:#4fb6b5;font-size:24px;font-weight:bold}.hero h2{font-size:26px;margin:0}.hero h2 span{color:var(--teal2)}.hero p{color:var(--muted);margin:5px auto 0;max-width:500px;font-size:14px}.notice{background:#fff8e5;border:1px solid #f3e3b2;color:#785d16;border-radius:14px;padding:11px 13px;font-size:12px;margin:12px 0 17px}.section-title{font-size:17px;margin:17px 2px 10px}.injuries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.injury{background:#fff;border:1px solid var(--line);border-radius:17px;padding:14px 12px;text-align:right;display:flex;align-items:center;gap:10px;cursor:pointer;min-height:80px;color:var(--ink);box-shadow:0 5px 15px #20364706}.injury:active{transform:scale(.99)}.injury.active{border:2px solid var(--teal);background:#f0fbfa}.emoji{width:42px;height:42px;display:grid;place-items:center;background:#edf8f7;border-radius:13px;font-size:22px;flex-shrink:0}.injury strong{display:block;font-size:13px}.injury small{display:block;font-size:10px;color:var(--muted);margin-top:2px}.detail{margin-top:16px;background:white;border:1px solid var(--line);border-radius:20px;padding:17px;box-shadow:0 10px 26px #20364708}.detail-head{display:flex;align-items:center;gap:10px}.detail-head .emoji{width:48px;height:48px}.detail-head h3{margin:0;font-size:18px}.detail-head p{margin:0;color:var(--muted);font-size:11px}.instructions{margin:14px 0 0;padding-right:22px}.instructions li{padding:4px 0;font-size:14px}.en{direction:ltr;text-align:left;border-top:1px dashed var(--line);margin-top:13px;padding-top:12px}.en h4{margin:0 0 5px;font-size:13px;color:var(--teal2)}.en p{font-size:12px;margin:5px 0;color:#516576}.buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.btn{border:0;border-radius:13px;padding:12px 14px;font:inherit;font-size:13px;font-weight:bold;cursor:pointer}.primary{background:var(--teal);color:white;flex:1}.secondary{background:#edf7f7;color:#2b7e85}.stop{background:#f2f5f7;color:#526778}.emergency{background:var(--red);color:#fff}.foot{font-size:10px;color:#8b9aa5;text-align:center;padding:18px 5px 5px}.hidden{display:none!important}@media(min-width:650px){.injuries{grid-template-columns:repeat(3,minmax(0,1fr))}.app{padding:24px}.hero{padding-top:28px}}button:focus-visible{outline:3px solid #e7bb57;outline-offset:2px}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="top">
+ <div class="brand"><div class="logo">+</div><div><h1>MediMate | ميدي ميت</h1><small id="brandSub">FIRST-AID COMPANION · رفيق الإسعافات الأولية</small></div></div>
+ <button class="lang" id="languageBtn" type="button">English</button>
+</header>
+<section class="hero">
+ <div class="bot" aria-label="Friendly healthcare robot"><div class="head"><div class="eyes"><i></i><i></i></div></div><div class="bodybot"><div class="cross">+</div></div></div>
+ <h2 id="heroTitle">مرحباً، أنا <span>ميدي ميت</span></h2>
+ <p id="heroCopy">اختر الحالة لعرض إرشادات الإسعافات الأولية والاستماع إليها باللغة العربية.</p>
+</section>
+<div class="notice" id="notice">⚠️ هذه إرشادات عامة وليست تشخيصاً طبياً. في الحالات الخطيرة، اتصل بالطوارئ المحلية فوراً واتبع تعليمات موظف الطوارئ.</div>
+<h3 class="section-title" id="chooseTitle">اختر الإصابة أو الحالة</h3>
+<section class="injuries" id="injuries" aria-label="First-aid topics"></section>
+<section class="detail" id="detail" aria-live="polite">
+ <div class="detail-head"><div class="emoji">👆</div><div><h3 id="detailTitle">اختر حالة من القائمة</h3><p id="detailSubtitle">ستظهر الخطوات هنا</p></div></div>
+ <div id="detailContent"></div>
+ <div class="buttons">
+  <button class="btn primary" id="speakBtn" type="button">🔊 استمع إلى التعليمات</button>
+  <button class="btn secondary" id="stopBtn" type="button">⏹ إيقاف الصوت</button>
+  <button class="btn emergency" id="emergencyBtn" type="button">☎ مساعدة طارئة</button>
+ </div>
+</section>
+<footer class="foot" id="footer">إذا كان الشخص لا يستجيب أو لا يتنفس بشكل طبيعي، اطلب الطوارئ فوراً. لا تعتمد على هذا التطبيق وحده.</footer>
+</main>
+<script>
+const topics = [
+{id:"bleeding",emoji:"🩹",ar:"نزيف أو جرح",en:"Bleeding or cut",subAr:"ضغط مباشر على الجرح",subEn:"Apply direct pressure",arSteps:["اضغط بقوة وثبات على الجرح باستخدام شاش أو قطعة قماش نظيفة.","استمر بالضغط. إذا تشبعت الضمادة بالدم، ضع قطعة أخرى فوقها ولا تنزع الأولى.","إذا كان النزيف شديداً أو لا يتوقف أو كان الجرح عميقاً، اطلب المساعدة الطبية العاجلة.","لا تنزع أي جسم مغروس في الجرح؛ اضغط حوله."],enSteps:["Press firmly on the wound with clean gauze or cloth.","Keep steady pressure. If blood soaks through, add another cloth on top; do not remove the first.","Get urgent medical help if bleeding is severe, does not stop, or the wound is deep.","Do not remove an embedded object; press around it."]},
+{id:"burn",emoji:"🔥",ar:"حرق أو سلق",en:"Burn or scald",subAr:"برّد الحرق بماء جارٍ",subEn:"Cool under running water",arSteps:["ضع المنطقة تحت ماء جارٍ بارد معتدل لمدة 20 دقيقة إن أمكن.","انزع الخواتم أو الملابس القريبة برفق، لكن لا تنزع شيئاً ملتصقاً بالجلد.","لا تستخدم الثلج أو الزبدة أو الكريمات، ولا تفقأ الفقاعات.","غطِّ الحرق بضمادة نظيفة غير لاصقة. اطلب المساعدة للحروق الكبيرة أو العميقة أو الكيميائية أو الكهربائية."],enSteps:["Cool the burn under cool running water for 20 minutes if possible.","Remove nearby jewellery or clothing gently, but do not remove anything stuck to skin.","Do not use ice, butter, creams, or pop blisters.","Cover loosely with a clean non-stick dressing. Seek help for large, deep, chemical, or electrical burns."]},
+{id:"choking",emoji:"🫁",ar:"اختناق",en:"Choking",subAr:"حالة قد تهدد الحياة",subEn:"Can be life-threatening",urgent:true,arSteps:["إذا كان الشخص لا يستطيع التنفس أو الكلام أو السعال، اطلب الطوارئ فوراً.","اطلب مساعدة شخص بالغ مدرّب واتبع تعليمات موظف الطوارئ.","إذا كان يستطيع السعال بقوة، شجعه على السعال وراقبه.","تختلف خطوات الإسعاف حسب العمر؛ أخبر موظف الطوارئ إن كان طفلاً أو رضيعاً."],enSteps:["If the person cannot breathe, speak, or cough, call emergency services immediately.","Get help from a trained adult and follow the emergency dispatcher’s instructions.","If they can cough forcefully, encourage coughing and watch them closely.","First aid differs by age; tell the dispatcher if the person is a child or infant."]},
+{id:"nosebleed",emoji:"👃",ar:"نزيف الأنف",en:"Nosebleed",subAr:"اجلس وانحنِ للأمام",subEn:"Sit and lean forward",arSteps:["اجلس واجعل رأسك مائلاً قليلاً إلى الأمام، وليس إلى الخلف.","اضغط على الجزء الطري من الأنف لمدة 10 إلى 15 دقيقة دون تركه كل لحظة للتحقق.","تنفس من الفم وابصق الدم الذي يصل إلى الفم بدلاً من ابتلاعه.","اطلب المساعدة إذا كان النزيف غزيراً، أو بعد إصابة قوية، أو لم يتوقف بعد 20 دقيقة."],enSteps:["Sit and lean slightly forward, not backward.","Pinch the soft part of the nose continuously for 10–15 minutes.","Breathe through the mouth and spit out blood that enters the mouth.","Get help if bleeding is heavy, follows a serious injury, or lasts beyond 20 minutes."]},
+{id:"sprain",emoji:"🦶",ar:"التواء أو تورّم",en:"Sprain or swelling",subAr:"راحة وبرودة ورفع",subEn:"Rest, cool, elevate",arSteps:["أوقف النشاط وأرح المنطقة المصابة.","ضع كمادة باردة ملفوفة بقطعة قماش لمدة تصل إلى 20 دقيقة في كل مرة.","ارفع الطرف المصاب إن كان ذلك مريحاً، وتجنب الضغط عليه إذا كان مؤلماً.","اطلب التقييم الطبي إذا كان الألم شديداً أو يوجد تشوه أو خدر أو تعذّر تحميل الوزن."],enSteps:["Stop the activity and rest the injured area.","Apply a cold pack wrapped in cloth for up to 20 minutes at a time.","Elevate the area if comfortable; avoid putting weight on it if painful.","Seek medical assessment for severe pain, deformity, numbness, or inability to bear weight."]},
+{id:"fracture",emoji:"🦴",ar:"اشتباه كسر",en:"Possible fracture",subAr:"لا تحرّك الجزء المصاب",subEn:"Keep the area still",arSteps:["اطلب المساعدة الطبية، وبشكل عاجل إذا كان الكسر واضحاً أو الإصابة شديدة.","لا تحاول تقويم العظم أو دفعه إلى مكانه.","اسند الجزء المصاب في الوضع الذي وجدته فيه، ولا تحرك الشخص إذا اشتبهت بإصابة الرقبة أو الظهر.","إذا كان هناك جرح، غطّه بضماد نظيف ولا تضغط مباشرة على عظم بارز."],enSteps:["Get medical help, urgently if the injury is severe or the fracture is obvious.","Do not straighten the bone or try to push it back into place.","Support the area as found. Do not move the person if neck or back injury is suspected.","Cover any wound with a clean dressing; do not press on a protruding bone."]},
+{id:"faint",emoji:"💫",ar:"إغماء",en:"Fainting",subAr:"تحقق من الاستجابة والتنفس",subEn:"Check responsiveness and breathing",urgent:true,arSteps:["تأكد أن المكان آمن، ثم نادِ الشخص برفق وتحقق من تنفسه.","إذا لم يستجب أو لم يكن يتنفس بشكل طبيعي، اتصل بالطوارئ فوراً واتبع تعليماتهم.","إذا استعاد وعيه سريعاً ويتنفس طبيعياً، اجعله يستلقي ولا تدعه يقف بسرعة.","اطلب مساعدة طبية إذا لم يتعافَ سريعاً أو أصيب أو تكرر الإغماء."],enSteps:["Make sure the area is safe, speak to the person, and check breathing.","If they do not respond or are not breathing normally, call emergency services and follow instructions.","If they quickly recover and breathe normally, have them lie down and do not let them stand suddenly.","Get medical help if recovery is not quick, they are injured, or fainting recurs."]},
+{id:"insect",emoji:"🐝",ar:"لسعة حشرة",en:"Insect sting",subAr:"نظّف وراقب الأعراض",subEn:"Clean and watch for symptoms",arSteps:["إذا بقيت إبرة اللسع ظاهرة، أزلها برفق دون عصر كيس السم إن أمكن.","اغسل المكان وضع كمادة باردة ملفوفة بقماش لتخفيف التورم.","إذا ظهر صعوبة في التنفس أو تورم اللسان أو الحلق أو دوخة شديدة، اطلب الطوارئ فوراً.","اطلب نصيحة طبية إذا زاد الاحمرار أو الألم أو ظهرت علامات عدوى."],enSteps:["If a stinger is visible, remove it gently without squeezing the venom sac if possible.","Wash the area and apply a cold pack wrapped in cloth.","Call emergency services for trouble breathing, tongue/throat swelling, or severe dizziness.","Seek medical advice if redness or pain worsens or signs of infection appear."]},
+{id:"poison",emoji:"☠️",ar:"تسمم أو مادة كيميائية",en:"Poison or chemical",subAr:"اطلب المساعدة فوراً",subEn:"Get expert help immediately",urgent:true,arSteps:["اتصل بالطوارئ المحلية أو بمركز السموم إن توفر، واطلب توجيهاً فورياً.","لا تحاول جعل الشخص يتقيأ، ولا تعطِه طعاماً أو شراباً إلا إذا طلب المختص ذلك.","احتفظ بعبوة المادة أو اسمها وأخبر المختص بما حدث ومتى.","إذا لامست المادة الجلد أو العين، اتبع تعليمات الطوارئ بشأن الشطف الآمن."],enSteps:["Call local emergency services or a poison information service for immediate advice.","Do not make the person vomit or give food or drink unless a professional says to.","Keep the product container/name and tell the professional what happened and when.","For skin or eye exposure, follow emergency professionals’ advice about safe rinsing."]},
+{id:"head",emoji:"🧠",ar:"إصابة في الرأس",en:"Head injury",subAr:"راقب علامات الخطر",subEn:"Watch for danger signs",arSteps:["اطلب الطوارئ إذا فقد الشخص الوعي، أو تقيأ مراراً، أو حدث تشنج، أو صار مشوشاً، أو ساء الصداع.","لا تحرك الرقبة إذا اشتبهت بإصابة في الرقبة أو الظهر.","ضع كمادة باردة ملفوفة بقماش على موضع التورم دون ضغط قوي.","لا تترك الشخص وحده؛ اطلب تقييماً طبياً عند الشك، خاصة بعد إصابة قوية."],enSteps:["Call emergency services for loss of consciousness, repeated vomiting, seizure, confusion, or worsening headache.","Do not move the neck if neck or back injury is suspected.","Apply a cloth-wrapped cold pack gently to swelling.","Stay with the person and seek medical assessment if unsure, especially after a significant impact."]},
+{id:"allergy",emoji:"🌼",ar:"حساسية شديدة",en:"Severe allergic reaction",subAr:"طوارئ",subEn:"Emergency",urgent:true,arSteps:["صعوبة التنفس أو تورم اللسان أو الحلق أو الانهيار قد تعني حساسية مهددة للحياة.","اتصل بالطوارئ فوراً واتبع تعليماتهم.","إذا كان لدى الشخص قلم أدرينالين موصوف له، ساعده على استخدامه حسب تعليمات الجهاز وخطة الطبيب.","لا تترك الشخص وحده؛ إذا ساءت حالته أخبر موظف الطوارئ فوراً."],enSteps:["Trouble breathing, tongue/throat swelling, or collapse can indicate a life-threatening reaction.","Call emergency services immediately and follow their instructions.","If the person has their prescribed adrenaline auto-injector, help them use it according to its instructions and their care plan.","Stay with them and update the dispatcher if their condition worsens."]},
+{id:"heat",emoji:"☀️",ar:"إجهاد حراري",en:"Heat illness",subAr:"انقل إلى مكان بارد",subEn:"Move to a cool place",arSteps:["انقل الشخص إلى مكان بارد وظليل وأوقف النشاط.","خفف الملابس الزائدة وبرّد الجسم بقطعة قماش مبللة ومروحة.","إذا كان واعياً تماماً وقادراً على البلع، يمكنه أخذ رشفات ماء.","الارتباك أو فقدان الوعي أو التشنج في الحر حالة طارئة؛ اتصل بالطوارئ ولا تعطِ فاقد الوعي شيئاً للشرب."],enSteps:["Move the person to a cool, shaded place and stop activity.","Loosen excess clothing and cool them with wet cloths and fanning.","If fully alert and able to swallow, they may sip water.","Confusion, collapse, or seizure in the heat is an emergency. Call for help and give nothing by mouth to an unconscious person."]}
+];
+let language = "ar";
+let selected = null;
+const $ = id => document.getElementById(id);
+function t(ar,en){return language==="ar"?ar:en}
+function renderList(){
+  $("injuries").innerHTML="";
+  topics.forEach(topic=>{
+    const b=document.createElement("button"); b.type="button"; b.className="injury"+(selected?.id===topic.id?" active":"");
+    b.innerHTML=`<span class="emoji">${topic.emoji}</span><span><strong>${language==="ar"?topic.ar:topic.en}</strong><small>${language==="ar"?topic.subAr:topic.subEn}</small></span>`;
+    b.addEventListener("click",()=>{selected=topic;renderList();renderDetail();});
+    $("injuries").appendChild(b);
+  });
+}
+function renderDetail(){
+  if(!selected){
+    $("detailTitle").textContent=t("اختر حالة من القائمة","Choose a topic above");
+    $("detailSubtitle").textContent=t("ستظهر الخطوات هنا","First-aid steps will appear here");
+    $("detailContent").innerHTML="";
+    return;
+  }
+  $("detailTitle").textContent=t(selected.ar,selected.en);
+  $("detailSubtitle").textContent=t(selected.subAr,selected.subEn);
+  const steps=language==="ar"?selected.arSteps:selected.enSteps;
+  const list=document.createElement("ol");list.className="instructions";
+  steps.forEach(s=>{const li=document.createElement("li");li.textContent=s;list.appendChild(li)});
+  const content=$("detailContent");content.replaceChildren(list);
+  const en=document.createElement("div");en.className="en";
+  const h=document.createElement("h4");h.textContent=language==="ar"?"English summary":"ملخص بالعربية";
+  const p=document.createElement("p");p.textContent=(language==="ar"?selected.enSteps:selected.arSteps).join(" ");
+  en.append(h,p);content.appendChild(en);
+}
+function speakSelected(){
+  if(!selected){alert(t("اختر إصابة أولاً.","Please choose an injury first."));return}
+  if(!("speechSynthesis" in window)){alert(t("ميزة الصوت غير مدعومة في هذا المتصفح. يمكنك قراءة النص على الشاشة.","Speech is not supported by this browser. Please read the text on screen."));return}
+  speechSynthesis.cancel();
+  const text=(language==="ar"?selected.arSteps:selected.enSteps).map((s,i)=>`${i+1}. ${s}`).join(" ");
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=language==="ar"?"ar":"en-US";u.rate=0.88;u.pitch=1;
+  const voices=speechSynthesis.getVoices();
+  const voice=voices.find(v=>language==="ar"?/^ar([-_]|$)/i.test(v.lang):/^en([-_]|$)/i.test(v.lang));
+  if(voice)u.voice=voice;
+  u.onerror=()=>alert(t("تعذّر تشغيل الصوت. تأكد من أن جهازك يدعم الصوت العربي.","Could not play voice. Check whether your device supports Arabic speech."));
+  speechSynthesis.speak(u);
+}
+$("speakBtn").addEventListener("click",speakSelected);
+$("stopBtn").addEventListener("click",()=>{if("speechSynthesis"in window)speechSynthesis.cancel()});
+$("emergencyBtn").addEventListener("click",()=>{
+ const saved=localStorage.getItem("medimateEmergencyNumber")||"";
+ const number=saved||prompt(t("أدخل رقم الطوارئ المحلي بعد التأكد منه. سيتم فتح تطبيق الاتصال لتأكيد المكالمة.","Enter your verified local emergency number. Your phone dialer will open for you to confirm the call."));
+ if(number&&/^[+0-9().\-\s]{3,25}$/.test(number)){
+   localStorage.setItem("medimateEmergencyNumber",number);
+   if(confirm(t(`فتح تطبيق الاتصال للرقم ${number}؟ يجب تأكيد المكالمة على هاتفك.`,`Open the phone dialer for ${number}? You must confirm the call on your phone.`))) location.href="tel:"+number.replace(/[^\d+]/g,"");
+ } else if(number) alert(t("تحقق من رقم الطوارئ وأدخله مرة أخرى.","Please check the number and try again."));
+});
+$("languageBtn").addEventListener("click",()=>{
+ language=language==="ar"?"en":"ar";
+ document.documentElement.lang=language;document.documentElement.dir=language==="ar"?"rtl":"ltr";
+ $("languageBtn").textContent=language==="ar"?"English":"العربية";
+ $("heroTitle").innerHTML=language==="ar"?'مرحباً، أنا <span>ميدي ميت</span>':'Hi, I’m <span>MediMate</span>';
+ $("heroCopy").textContent=t("اختر الحالة لعرض إرشادات الإسعافات الأولية والاستماع إليها باللغة العربية.","Choose a topic to read first-aid guidance and hear it spoken.");
+ $("notice").textContent=t("⚠️ هذه إرشادات عامة وليست تشخيصاً طبياً. في الحالات الخطيرة، اتصل بالطوارئ المحلية فوراً واتبع تعليمات موظف الطوارئ.","⚠️ General guidance only, not a medical diagnosis. For serious emergencies, call local emergency services and follow the dispatcher’s instructions.");
+ $("chooseTitle").textContent=t("اختر الإصابة أو الحالة","Choose an injury or situation");
+ $("brandSub").textContent=t("FIRST-AID COMPANION · رفيق الإسعافات الأولية","FIRST-AID COMPANION · رفيق الإسعافات الأولية");
+ $("speakBtn").textContent=t("🔊 استمع إلى التعليمات","🔊 Speak instructions");
+ $("stopBtn").textContent=t("⏹ إيقاف الصوت","⏹ Stop voice");
+ $("emergencyBtn").textContent=t("☎ مساعدة طارئة","☎ Emergency help");
+ $("footer").textContent=t("إذا كان الشخص لا يستجيب أو لا يتنفس بشكل طبيعي، اطلب الطوارئ فوراً. لا تعتمد على هذا التطبيق وحده.","If someone is unresponsive or not breathing normally, call emergency services immediately. Do not rely on this app alone.");
+ renderList();renderDetail();
+});
+renderList();renderDetail();
+</script>
+</body>
+</html>
